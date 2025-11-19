@@ -10,6 +10,5 @@ spec:
   containers:
     - name: wget
       image: busybox
-      command: ['wget']
-      args: ['{{ include "shipping.fullname" . }}:{{ .Values.service.port }}']
+      command: ['sh', '-c', 'echo Pod is running']
   restartPolicy: Never
